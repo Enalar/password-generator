@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generater</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="card-wrapper">
+        <h1>Generate a <span class="title-highlight">random password</span></h1>
+        <p>Never use an insecure password again.</p>
+        <label class="checkbox-container">
+            Numbers
+            <input id="number-el" type="checkbox">
+            <span class="checkmark"></span>
+        </label>
+        <label class="checkbox-container">
+            Symbols
+            <input id="symbol-el" type="checkbox">
+            <span class="checkmark"></span>
+        </label>
+        <label class="text-input">
+            Length of the password: 
+            <input id="length-el" type="text">
+        </label>
+        <button onclick="generatePasswords()">Generate passwrods</button>
+        <hr>
+        <div class="passwrods-wrapper">
+            <div id="first-password" class="password" onclick="copyPassword(this.id)"></div>
+            <div id="second-password" class="password" onclick="copyPassword(this.id)"></div>    
+        </div>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

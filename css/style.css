@@ -1,0 +1,133 @@
+:root {
+    --blackish-green: #1C1C1C;
+    --very-dark-green: #1F2937;
+    --dark-green: #273549;
+    --accent-green: #4ADF86;
+    --btn-bg: #10B981;
+    --password-color: #55F991;
+    --light-gray: #D5D4D8;
+    --white: #fff;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: var(--blackish-green);
+    color: var(--light-gray);
+    display: grid;
+    place-content: center;
+    font-family: 'Karla', sans-serif;
+    font-size: 20px;
+}
+
+h1 {
+    color: var(--white);
+}
+
+hr {
+    border: none;
+    background-color: var(--dark-green);
+    height: 1px;
+}
+
+button {
+    background-color: var(--btn-bg);
+    color: var(--white);
+    font-family: inherit;
+    font-size: inherit;
+    border: none;
+    border-radius: 6px;
+    padding: 9px 15px;
+    margin: 20px 0;
+}
+
+button:hover {
+    background-color: var(--dark-green);
+    color: var(--accent-green);
+}
+
+label {
+    display: block;
+    margin-bottom: 12px;
+}
+
+/* CHECKBOX  */
+
+.checkbox-container {
+    position: relative;
+    padding-left: 26px;
+    cursor: pointer;
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 5%;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: var(--blackish-green);
+}
+
+.checkbox-container:hover input ~ .checkmark {
+    background-color: var(--dark-green);
+}
+
+.checkbox-container input:checked ~ .checkmark {
+    background-color: var(--btn-bg);
+}
+
+/* TEXT INPUT */
+
+.text-input > input {
+    background-color: var(--dark-green);
+    color: hsl(0, 0%, 100%, 0.6);
+    font-family: inherit;
+    font-size: inherit;
+    border: none;
+    margin-left: 2px;
+    padding: 4px 8px;
+    border-radius: 3px;
+}
+
+.text-input > input:focus {
+    outline: none;
+}
+
+.card-wrapper {
+    background-color: var(--very-dark-green);
+    padding: 52px;
+}
+
+.title-highlight {
+    color: var(--btn-bg);
+    display: grid;
+}
+
+.passwrods-wrapper {
+    display: flex;
+    justify-content: space-around;
+    gap: 24px;
+    margin: 33px 0;
+}
+
+.password {
+    background-color: var(--dark-green);
+    color: var(--password-color);
+    width: 211px;
+    min-height: 39px;
+    border-radius: 5px;
+    display: grid;
+    place-content: center;
+}
+
